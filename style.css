@@ -1,0 +1,22 @@
+/* Aplica la fuente "Open Sans" a todo el cuerpo del texto y encabezados */
+body {
+  //font-family: 'Calibri';
+  font-size:.8rem;
+}
+
+/* Opcional: para asegurarte de que los encabezados también la usen */
+h1, h2, h3, h4, h5{
+  font-family: 'Calibri', sans-serif;
+}
+
+h1{
+  font-size:1.3rem;
+}
+
+h2{
+  font-size:1.2rem;
+}
+
+h3{
+  font-size:1rem;
+}

@@ -1,0 +1,353 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Snippets Everest: Guía de Referencia",
+    "section": "",
+    "text": "1 Presentación\nEste es un compendio de todo el codigo que necesitaré para buscar a Sujhey y perdirle una oportunidad. Todo el codigo debe ser referido a Api(Controller).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Presentación</span>"
+    ]
+  },
+  {
+    "objectID": "Git/Comandos.html",
+    "href": "Git/Comandos.html",
+    "title": "2  Comandos básicos",
+    "section": "",
+    "text": "2.1 Pasos",
+    "crumbs": [
+      "I. Git",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Comandos básicos</span>"
+    ]
+  },
+  {
+    "objectID": "Git/Comandos.html#pasos",
+    "href": "Git/Comandos.html#pasos",
+    "title": "2  Comandos básicos",
+    "section": "",
+    "text": "Ubicarse en la carpeta y crear reposiorio local\nAgregar al pool local las nuevas modificaciones",
+    "crumbs": [
+      "I. Git",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Comandos básicos</span>"
+    ]
+  },
+  {
+    "objectID": "Git/Comandos.html#código",
+    "href": "Git/Comandos.html#código",
+    "title": "2  Comandos básicos",
+    "section": "2.2 Código",
+    "text": "2.2 Código\n\nUbicarse en la carpeta y crear reposiorio local\n\n# Iniciar repositorio\ngit init\n\n# Agregar los archivos al pool\ngit add .\n\n# Verificar si fueron agregados\ngit status\n\n# Hacer primer commit\ngit commit -m \"Init\"\n\n# Verificar el commit\ngit log --oneline\n\n# Crear repositorio en github, si se desea publicar debe ser publico.\ngit remote add repos https://github.com/aerostain/SnippetsBook_011225.git\n\n# Push los archivos del pool local al repositorio\ngit push repos master\n\n# Verificar\ngit log\n\nAgregar al pool local las nuevas modificaciones\n\n# Agregar nuevos cambios al pool\ngit add .\n\n# Hacer commit\ngit commit -m \"Add Git\"\n\n# Agregar a repositorio remoto\ngit push repos master\n\n# Verificar\ngit log",
+    "crumbs": [
+      "I. Git",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Comandos básicos</span>"
+    ]
+  },
+  {
+    "objectID": "QuartoDoc/Book.html",
+    "href": "QuartoDoc/Book.html",
+    "title": "3  Book",
+    "section": "",
+    "text": "3.1 Plan",
+    "crumbs": [
+      "II. Quarto",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Book</span>"
+    ]
+  },
+  {
+    "objectID": "QuartoDoc/Book.html#plan",
+    "href": "QuartoDoc/Book.html#plan",
+    "title": "3  Book",
+    "section": "",
+    "text": "Crear _quarto.yml.\nCrear index.qmd -&gt; Aquí ya funciona!.\nAgregar estilos css con style.css.\nPrevisualizar / renderizar.",
+    "crumbs": [
+      "II. Quarto",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Book</span>"
+    ]
+  },
+  {
+    "objectID": "QuartoDoc/Book.html#código",
+    "href": "QuartoDoc/Book.html#código",
+    "title": "3  Book",
+    "section": "3.2 Código",
+    "text": "3.2 Código\n\nCrear _quarto.yml\n\nproject:\n  type: book\n  output-dir: _book\n\nbook:\n  title: \"Snippets Everest: Guía de Referencia\"\n  author: \"Rick\"\n  date: \"2025-11-29\"\n\n  chapters:\n    - index.qmd\n    - part: \"I. PostgreSQL\"\n      chapters:\n        - PostgreSql/Conexion.qmd\n        - PostgreSql/ConfigApi.qmd\n        - PostgreSql/ComandosBasicos.qmd\n        - PostgreSql/Utilidades.qmd\n        - PostgreSql/Ejemplo1.qmd\n\n  downloads: [pdf]\n\nformat:\n  html:\n    theme:\n      light: lux\n      dark: slate\n        \n    css:    \n      - https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap\n      - https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css\n      - style.css   \n      \n    # Opciones de libro\n    toc: true # Muestra la Tabla de Contenidos en la navegación\n    #toc-depth: 3 # Muestra encabezados hasta el nivel H3 en la tabla de contenidos\n    code-fold: true # Permite plegar bloques de código para un aspecto más limpio\n\n  pdf:\n    documentclass: scrreprt\n\nCrear index.qmd Siempre debe existir un archivo index.qmd\n\n# Introducción\nEscribir un resumen.\n\nCrear style.css\n\n/* Aplica la fuente \"Open Sans\" a todo el cuerpo del texto y encabezados */\nbody {\n  //font-family: 'Calibri';\n  font-size:.8rem;\n}\n\n/* Opcional: para asegurarte de que los encabezados también la usen */\nh1, h2, h3, h4, h5{\n  font-family: 'Calibri', sans-serif;\n}\n\nh1{\n  font-size:1.3rem;\n}\n\nh2{\n  font-size:1.2rem;\n}\n\nh3{\n  font-size:1rem;\n}\n\nVisualizar Si se usa desde block de notas la vista solo se actualiza si se modifica index.qmd y _quarto.yml\n\nquarto preview",
+    "crumbs": [
+      "II. Quarto",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Book</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Conexion.html",
+    "href": "PostgreSql/Conexion.html",
+    "title": "4  Conexion",
+    "section": "",
+    "text": "4.1 Powershell + PgAdmin + Aiven\nPasos:\nLa mejor opción es usar una variable de entorno para la contraseña, como se hizo arriba, pero sino puedes usar:",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conexion</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Conexion.html#powershell-pgadmin-aiven",
+    "href": "PostgreSql/Conexion.html#powershell-pgadmin-aiven",
+    "title": "4  Conexion",
+    "section": "",
+    "text": "Ubicar el psql.exe, al tener instalado PgAdmin: Z:\\Program Files\\pgAdmin 4\\runtime.\nEn Powershell:\n\n# Alias temporal\nSet-Alias psql \"Z:\\Program Files\\pgAdmin 4\\runtime\\psql.exe\"\n\n# Contraseña Aiven\n$env:PGPASSWORD=\"AVNS_9oZSu3QxeQTqm33fAUN\"\n\n# Conexión (Al pareceer las comillas son opcionales)\npsql -h postgreusa101-richims026-65e7.k.aivencloud.com -p 28194 -U avnadmin -d defaultdb\n\n# Ejecutalá y te pedirá ingresar la contraseña:\n& \"Z:\\Program Files\\pgAdmin 4\\runtime\\psql.exe\" `\n-h TU_HOST_AIVEN `\n-p TU_PUERTO_AIVEN `\n-U TU_USUARIO_AIVEN `\n-d TU_NOMBRE_DB `\n**-W**",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conexion</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html",
+    "href": "PostgreSql/ConfigApi.html",
+    "title": "5  Configuración Api",
+    "section": "",
+    "text": "5.1 Referencias:",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html#referencias",
+    "href": "PostgreSql/ConfigApi.html#referencias",
+    "title": "5  Configuración Api",
+    "section": "",
+    "text": "https://x.com/i/grok?conversation=1994596166160257348 https://gemini.google.com/app/a9e250c34ae5b646?hl=es",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html#recomendaciones",
+    "href": "PostgreSql/ConfigApi.html#recomendaciones",
+    "title": "5  Configuración Api",
+    "section": "5.2 Recomendaciones:",
+    "text": "5.2 Recomendaciones:\n\nNunca uses el usuario postgres (superusuario) para conectar tu API en producción. Lo correcto y más seguro es crear un rol específico para tu aplicación con el principio de mínimo privilegio.\nPrimero crea la base de datos y el esquema con el superusuario (postgres), luego crea el rol de la aplicación con mínimos privilegios, y finalmente le das solo los permisos que necesita sobre lo que ya existe y lo que se creará en el futuro.",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html#pasos",
+    "href": "PostgreSql/ConfigApi.html#pasos",
+    "title": "5  Configuración Api",
+    "section": "5.3 Pasos:",
+    "text": "5.3 Pasos:\n\nUsar el superusuario postgre para:\n\nCrear base de datos.\nCrear tablas y relaciones (ejecutar script).\nCrear siempre un esquema.\nCrea rol/usuario y darle permisos.\nConceder al rol/usuario permisos para modificaciones futuras.\n\nAl usar PgAdmin\n\nSeleccionar la base de datos y elegir ambos:\n\nPSQL Tool\nQuery Tool\n\n\n\nComandos básicos para explorar:\n# Para ver todos los roles/usuarios y permisos\n\\du+\n\n# Eliminar roles\ndrop role mirol;\n\n# Cambiar de rol\nset role avnadmin;\n\n# Saber mi rol actual\nselect current_user;\n\\conninfo\n\n# Ver los permisos de un rol/usuario a una tabla especifica\n\\z postulantes.\"Test\"\n\\dp postulantes.\"Test\"\n\n# Todas las bases de datos\n\\l\n\n# Conectarse a una\n\\c\n\n# Ver esquemas\n\\dn\n\n# Ver tablas\n\\dt\n\n# Estructura de la tabla\n\\d \"Destinos\"",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html#script-completo-de-creación",
+    "href": "PostgreSql/ConfigApi.html#script-completo-de-creación",
+    "title": "5  Configuración Api",
+    "section": "5.4 Script completo de creación:",
+    "text": "5.4 Script completo de creación:\n-- Conéctate como postgres o un superusuario, solo un superusuario puede crear bases de datos.\nCREATE DATABASE postulantes_db;\n\n-- Conectarme a la base de datos\n\\c postulantes_db;\n\n-- Creamos el esquema\nCREATE SCHEMA IF NOT EXISTS postulantes AUTHORIZATION postgres;\n\n-- Creamos el usuario que usará la API\nCREATE ROLE miapi_postulantes WITH LOGIN PASSWORD 'Sup3rS3cr3tP4ssw0rd!2025!';\n\n-- Todas las tablas, secuencias, funciones, etc. se crean con owner = postgres\n-- Ejecutas todas las migraciones / scripts SQL (EF Core migrations, Flyway, Liquibase, etc.)\n\n-- Le permitimos entrar a la base\nGRANT CONNECT ON DATABASE postulantes_db TO miapi_postulantes;\n\n-- Que pueda ver el esquema\nGRANT USAGE ON SCHEMA public TO miapi_postulantes;\n\n-- Permiso para crear objetos temporales (EF los usa)\nGRANT TEMPORARY ON DATABASE postulantes_db TO miapi_postulantes;\n\n-- Permisos sobre objetos existentes\n-- Lectura/escritura en tablas existentes\nGRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO miapi_postulantes;\n\n-- Para que funcione el auto-increment\nGRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO miapi_postulantes;\n\n-- Si tienes stored procedures o funciones\nGRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO miapi_postulantes;\n\n-- ¡¡IMPORTANTÍSIMO!! Permisos por defecto para objetos futuros (EF Core los crea en runtime)\n-- Para tablas que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA public \n  GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO miapi_postulantes;\n\n-- Para secuencias que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA public \n  GRANT USAGE, SELECT, UPDATE ON SEQUENCES TO miapi_postulantes;\n\n-- Para funciones que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA public \n  GRANT EXECUTE ON FUNCTIONS TO miapi_postulantes;\n\n-- Quitamos permiso de crear objetos nuevos (solo el equipo de despliegue los crea)\nREVOKE CREATE ON SCHEMA postulantes FROM miapi_postulantes;\n\n-- El owner de la base sigue siendo un superusuario o un rol de despliegue, nunca el de la aplicación\nALTER DATABASE postulantes_db OWNER TO postgres;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ConfigApi.html#api",
+    "href": "PostgreSql/ConfigApi.html#api",
+    "title": "5  Configuración Api",
+    "section": "5.5 Api",
+    "text": "5.5 Api\nConfiguración del appsettings.json para usar en la Api:\n\"ConnectionStrings\": {\n  \"DefaultConnection\": \"Host=localhost;Database=postulantes_db;Username=miapi_postulantes;Password=PASSWORD};\"\n}",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Configuración Api</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html",
+    "href": "PostgreSql/ComandosBasicos.html",
+    "title": "6  Comandos Básicos",
+    "section": "",
+    "text": "6.1 Referencias",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#referencias",
+    "href": "PostgreSql/ComandosBasicos.html#referencias",
+    "title": "6  Comandos Básicos",
+    "section": "",
+    "text": "Procedimientos Almacenados y comandos básicos link",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#exploración",
+    "href": "PostgreSql/ComandosBasicos.html#exploración",
+    "title": "6  Comandos Básicos",
+    "section": "6.2 Exploración",
+    "text": "6.2 Exploración\nselect * from pg_database;\nselect * from pg_tables;\nselect * from pg_tables where schemaname like 'pg_catalog';\nselect * from pg_roles;\n\n6.2.1 Exploracion en consola\n\\l # Lista todas las bases de datos.\n\\c &lt;nombre_base_de_datos&gt; # Conecta a una base de datos diferente.\n\n\\dt # Lista las tablas de la base de datos actual, solo esquema public.\n\\dt *.* # Lista las tablas de todos los esquemas.\n\\dt+ postulantes.* # Lista las tablas de ese esquema.\n\\dt+ postulantes.mitabla # Lista una tabla especifica.\n\n\\dv # Lista todas las vistas.\n\\df # Lista todas las funciones.\n\\dn # Lista los esquemas.\n\\dn+ postulantes # Permisos sobre un esquema.\n\n\\d # Estructura de una Tabla. Describe una tabla específica (o todas si no se especifica nombre).\n\\d postulantes.* # Estructura de las tablas de ese esquema.\n\\d postulantes.mitabla # Estructura de las tablas especifica.\n\n# Lista los usuarios/roles y permisos.\n\\du\n\\du+ \n\n# Ver los permisos de un rol/usuario a una tabla especifica.\n\\dp postulantes.*\n\\dp postulantes.\"Test\" \n\\z postulantes.*\n\\z postulantes.\"Test\"\n\n# Saber mi rol actual\nselect current_user; \n\\conninfo # Solo da información de como me conecte, no del usuario actual.\n\n# Cambiar de rol\nset role avnadmin;\n\n# Eliminar roles\ndrop role mirol;\n\n# Guarda la salida de la consulta en el archivo especificado.\n# La salida por defecto esta en -&gt; Z:\\Program Files\\pgAdmin 4\\runtime\n# Puedes escribir la ruta así:  \\o z:/r1ck7/Documents/tmp13.txt\n# Escribir \\o al inicio y final para dejar de escribir en el archivo.\n\\o resultados.txt\nSELECT id, nombre FROM clientes WHERE ciudad = 'Lima';\n\\o \n\n# Ejecuta comandos desde un archivo. \n\\i /rutacompleta/mis_comandos.sql\n\n# Muestra el tiempo de ejecución de cada sentencia sql no de los comandos.\n# \\timing para iniciar y otra vez para terminar.\n\\timing \n\n\\? # Muestra una lista de todos los comandos de meta.\n\\h # Muestra la ayuda para comandos SQL. Por ejemplo, \\h SELECT mostrará la ayuda para el comando SELECT.\n\n\\s # Muestra el historial de comandos.\n\\q # Sale de la consola de psql.",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#seguridad-permisos-y-privilegios",
+    "href": "PostgreSql/ComandosBasicos.html#seguridad-permisos-y-privilegios",
+    "title": "6  Comandos Básicos",
+    "section": "6.3 Seguridad: Permisos y Privilegios",
+    "text": "6.3 Seguridad: Permisos y Privilegios\n\n6.3.1 Base de datos\nAl usar obtenemos avnadmin=CTc/avnadmin. |Código|Permiso Completo|Significado| |—|—|—| |C|CREATE|Permite al rol crear nuevos esquemas dentro de esta base de datos.| |T|TEMPORARY|Permite al rol crear tablas temporales en esta base de datos.| |c|CONNECT|Permite al rol conectarse a esta base de datos.|\n\n\n6.3.2 Roles\nAl usar \\z postulantes.tabletest obtenemos: adminapp=arwd/avnadmin, en el formato general es: rol=privilegios/otrorol (donde otrorol es el rol que concedió esos privilegios).\n\n\n\n\n\n\n\n\nCarácter\nPrivilegio\nDescripción\n\n\n\n\na\nINSERT\nPermite añadir nuevas filas.\n\n\nr\nSELECT\nPermite leer datos de las filas.\n\n\nw\nUPDATE\nPermite modificar datos existentes.\n\n\nd\nDELETE\nPermite eliminar filas.\n\n\nD\nTRUNCATE\nPermite vaciar la tabla rápidamente.\n\n\nx\nREFERENCES\nPermite crear una clave foránea que apunte a esta tabla.\n\n\nt\nTRIGGER\nPermite crear triggers sobre la tabla.\n\n\n\n\n\n6.3.3 Schemas\nAl usar \\dn+ postulantes obtenemos: avnadmin=UC/avnadmin+ con el formato: role_app=UC/owner.\n\nU: Privilegio USAGE (Permite acceder a los objetos dentro del schema).\nC: Privilegio CREATE (Permite crear nuevos objetos dentro del schema).\n\n\n\n\nCarácter\nObjeto\nPrivilegio\nDescripción\n\n\n\n\nU\nSchema USAGE\nPermite acceder a los objetos dentro del schema.\n\n\n\nC\nSchema CREATE\nPermite crear nuevos objetos.\n\n\n\nr\nTabla/Vista SELECT\nLectura de datos.\n\n\n\nw\nTabla/Vista UPDATE\nModificación de datos.\n\n\n\na\nTabla/Vista INSERT\nAdición de datos.\n\n\n\nd\nTabla/Vista DELETE\nEliminación de datos.\n\n\n\n\nEstos son comandos genericos. Para trabajar con Api revisar “Configuración Inicial”:\n-- Crear rol/usuario\nCREATE ROLE nombre_rol WITH LOGIN PASSWORD 'contraseña';\n\n-- Conceder Permisos (Privilegios)\nGRANT SELECT, INSERT ON nombre_tabla TO nombre_rol;\nGRANT ALL PRIVILEGES ON DATABASE nombre_db TO nombre_rol;\n\n-- Revocar Permisos: Elimina derechos otorgados.\nREVOKE DELETE ON nombre_tabla FROM nombre_rol;\n\n-- Convertir en Superusuario (con cuidado):\nALTER ROLE nombre_rol SUPERUSER;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#creación-base-de-datos",
+    "href": "PostgreSql/ComandosBasicos.html#creación-base-de-datos",
+    "title": "6  Comandos Básicos",
+    "section": "6.4 Creación Base de Datos",
+    "text": "6.4 Creación Base de Datos\n-- Crear\nCREATE DATABASE nombre_db;\n\n-- Cambiar Nombre de la Base de Datos\nALTER DATABASE nombre_db RENAME TO nuevo_nombre;\n\n-- Eliminar\nDROP DATABASE nombre_db;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#creación-tablas",
+    "href": "PostgreSql/ComandosBasicos.html#creación-tablas",
+    "title": "6  Comandos Básicos",
+    "section": "6.5 Creación Tablas",
+    "text": "6.5 Creación Tablas\n-- Crear Tabla\nCREATE TABLE productos (id SERIAL PRIMARY KEY, nombre VARCHAR(100), precio NUMERIC(10, 2));\n\n-- Actualizar Tabla\nALTER TABLE productos ADD COLUMN stock INTEGER DEFAULT 0;\n\n-- Eliminar Tabla\nDROP TABLE productos;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#creación-registros",
+    "href": "PostgreSql/ComandosBasicos.html#creación-registros",
+    "title": "6  Comandos Básicos",
+    "section": "6.6 Creación Registros",
+    "text": "6.6 Creación Registros\n-- Insertar\nINSERT INTO tabla (col1, col2) VALUES ('valor1', 'valor2');\n\n-- Leer\nSELECT * FROM tabla WHERE condicion;\n\n-- Actualizar\nUPDATE tabla SET columna = 'nuevo_valor' WHERE id = 1;\n\n-- Borrar\nDELETE FROM tabla WHERE id = 5;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#referencias-1",
+    "href": "PostgreSql/ComandosBasicos.html#referencias-1",
+    "title": "6  Comandos Básicos",
+    "section": "6.7 Referencias",
+    "text": "6.7 Referencias\nCualquier cambio en el padre desencadena una acción predefinida en el hijo (ON DELETE/ON UPDATE con CASCADE, SET NULL, etc.).\nCREATE TABLE pedidos (\n    pedido_id INT PRIMARY KEY,\n    cliente_id INT,\n    -- Define la clave foránea\n    FOREIGN KEY (cliente_id) REFERENCES clientes (id) on delete cascade on update cascade",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#filtro-y-agrupación",
+    "href": "PostgreSql/ComandosBasicos.html#filtro-y-agrupación",
+    "title": "6  Comandos Básicos",
+    "section": "6.8 Filtro y Agrupación",
+    "text": "6.8 Filtro y Agrupación\n-- WHERE\nSELECT * FROM empleados WHERE salario &gt; 50000;\n\n-- GROUP BY\nSELECT departamento, COUNT(*) FROM empleados GROUP BY departamento;\n\n-- HAVING\nSELECT departamento, AVG(salario) FROM empleados GROUP BY departamento HAVING AVG(salario) &lt; 60000;\n\n-- ORDER BY\nSELECT nombre FROM empleados ORDER BY nombre DESC;\n\n-- LIMIT\nSELECT * FROM productos LIMIT 10;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#join",
+    "href": "PostgreSql/ComandosBasicos.html#join",
+    "title": "6  Comandos Básicos",
+    "section": "6.9 Join",
+    "text": "6.9 Join\n-- INNER JOIN\nSELECT * FROM A INNER JOIN B ON A.fk = B.pk;\n\n-- LEFT JOIN\nSELECT * FROM clientes LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#restricciones-y-check",
+    "href": "PostgreSql/ComandosBasicos.html#restricciones-y-check",
+    "title": "6  Comandos Básicos",
+    "section": "6.10 Restricciones y Check",
+    "text": "6.10 Restricciones y Check\nCREATE TABLE notas (\n    calificacion NUMERIC CHECK (calificacion &gt;= 0 AND calificacion &lt;= 10)\n);",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#procedimientos-almacenadosfunciones",
+    "href": "PostgreSql/ComandosBasicos.html#procedimientos-almacenadosfunciones",
+    "title": "6  Comandos Básicos",
+    "section": "6.11 Procedimientos Almacenados/Funciones",
+    "text": "6.11 Procedimientos Almacenados/Funciones\nMientras que otros SGBD pueden usar los términos “procedimiento” y “función” indistintamente, PostgreSQL hace una distinción muy importante:\n\n\n\n\n\n\n\n\nCaracterística\nProcedimiento (CREATE PROCEDURE)\nFunción (CREATE FUNCTION)\n\n\n\n\nControl Transaccional\nPuede usar COMMIT y ROLLBACK.\nNo puede usar COMMIT o ROLLBACK.\n\n\nDevuelve Valor\nNo devuelve un valor o conjunto de valores directamente (usa parámetros OUT).\nSiempre devuelve un valor o un conjunto de valores (tabla).\n\n\nLlamada\nSe llama usando la sentencia CALL.\nSe llama como una expresión en una consulta (SELECT).\n\n\n\n\nSi necesita una unidad de trabajo que gestione su propia transacción (es decir, que decida cuándo grabar o deshacer los cambios), use un Procedimiento Almacenado. Si necesita una subrutina que calcule y devuelva un resultado, use una Función.\n\n\n6.11.1 Procedimientos Almacenados\nCuando se requiere controlar transacciones. Si todo se cumple COMMIT. De lo contrario ROLLBACK.\n-- Ver\n\\df\n\n-- Crear\nCREATE PROCEDURE insertarusuario_proc (_name varchar,_ischeck bool)\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    insert into postulantes.tabletest values (default,_name,_ischeck,default);\n    commit;\nEND;\n$$;\n\n-- Uso\ncall insertarusuario_proc('Raquel',true);\n\n-- Borrar\ndrop procedure insertarusuario_proc;\n\n\n6.11.2 Funciones\n-- Ver\n\\df\n\n-- Crear\nCREATE FUNCTION calcular_iva (_precio NUMERIC, _tasa NUMERIC DEFAULT 0.19) \nRETURNS NUMERIC -- Siempre tiene retorno.\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    RETURN _precio * _tasa;\nEND;\n$$;\n\n-- Uso\nselect name,calcular_iva(id) from postulantes.tabletest;\n\n-- Borrar\ndrop function calcular_iva;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/ComandosBasicos.html#triggers",
+    "href": "PostgreSql/ComandosBasicos.html#triggers",
+    "title": "6  Comandos Básicos",
+    "section": "6.12 Triggers",
+    "text": "6.12 Triggers",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Comandos Básicos</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Utilidades.html",
+    "href": "PostgreSql/Utilidades.html",
+    "title": "7  Shortcuts",
+    "section": "",
+    "text": "Codigo rápido.\n\nPara comillas en tablas y consultas:\n\n-- Para nombres de Tablas usar comillas dobles:\nselect * from postulantes.\"Test\";\n\n-- Para valores de columna/celda usar comillas simples:\nselect * from pg_tables where schemaname like 'postulantes';\n\n-- Ejemplo:\ninsert into postulantes.\"Test\" values (default,'Luciana',true,default);\n\nPara crear la columna Fcreacion:\n\nFcreacion timestamptz default now()\n\nRoles/Usuarios\n\nselect current_user;\nset role adminapp;",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Shortcuts</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Ejemplo1.html",
+    "href": "PostgreSql/Ejemplo1.html",
+    "title": "8  Ejemplo 1",
+    "section": "",
+    "text": "8.1 Pasos\nRelación 1 a 1: Registro de Postulantes.",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ejemplo 1</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Ejemplo1.html#pasos",
+    "href": "PostgreSql/Ejemplo1.html#pasos",
+    "title": "8  Ejemplo 1",
+    "section": "",
+    "text": "Usando postgres/avnadmin crear la base de datos, el esquema y las tablas.\nCrear un role/usuario y asignarle los permisos:\n\nAcceso a la base de datos.\nUsar el esquema, pero no agregar tablas al esquema.\nOperaciones CRUD en las tablas (objetos existentes).\nPermitir auto incremento.\nPermitir objetos temporales.\nPermitir stored procedures y/o funciones.\nPermisos para EF Core (tablas futuras).\nPermisos para auto incremento (tablas futuras).\nPermisos para stored procedures y/o funciones (futuras).\nQuitar el permiso de crear tablas en el esquema (por si acaso).\nAsegurarse que el propietario siempre debe ser postgres/avnadmin (por si acaso).\n\nAcceder con el usuario nuevo.",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ejemplo 1</span>"
+    ]
+  },
+  {
+    "objectID": "PostgreSql/Ejemplo1.html#código",
+    "href": "PostgreSql/Ejemplo1.html#código",
+    "title": "8  Ejemplo 1",
+    "section": "8.2 Código",
+    "text": "8.2 Código\nDesde consola psql.exe.\n\nUsando postgres/avnadmin crear la base de datos, el esquema y las tablas.\n\n-- Inspeccionar y establecer usuario administrador\n\\l\n\\du+\nselect current_user;\nset role avnadmin;\n\n-- Crear Base de Datos y conectarse\nCREATE DATABASE postulantes_db;\n\\c postulantes_db;\n\n-- Crear esquema \nCREATE SCHEMA IF NOT EXISTS postulantes AUTHORIZATION avnadmin;\n\n-- Crear Tablas\ncreate table postulantes.\"Postulante\"(\nid serial primary key, \nnombre varchar(100),\nadjuntos bool default true,\nfcreacion timestamptz default now()\n);\n\ncreate table postulantes.\"Adjuntos\"(\nid serial primary key, \nidpostulante int,\nnombre_original varchar(250),\nfcreacion timestamptz default now(),\nforeign key (idpostulante) references postulantes.\"Postulante\"(id) on delete cascade\n);\n\n-- Verificar\n\\dt+ postulantes.*\n\nCrear un role/usuario y asignarle los permisos desde usuario avnadmin/postgres:\n\n-- Creamos el usuario que usará la API\nCREATE ROLE adminapp WITH LOGIN PASSWORD 'adminapp';\n\n-- Verificar\n\\du+\n\n-- Permiso para acceder a Base de datos\nGRANT CONNECT ON DATABASE postulantes_db TO adminapp;\n\n-- Verificar debe decir adminapp=Tc/avnadmin\n\\l\n\n-- Permiso para acceder al esquema\nGRANT USAGE ON SCHEMA postulantes TO adminapp;\n\n-- Verificar debe decir adminapp=U/avnadmin\n\\dn+\n\n-- Permiso para crear objetos temporales (EF los usa)\nGRANT TEMPORARY ON DATABASE postulantes_db TO adminapp;\n\n-- Permisos lectura/escritura en tablas existentes\nGRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA postulantes TO adminapp;\n\n-- Permiso para que funcione el auto-increment\nGRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA postulantes TO adminapp;\n\n-- Permiso para stored procedures o funciones\nGRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA postulantes TO adminapp;\n\n-- ¡¡IMPORTANTÍSIMO!! Permisos por defecto para objetos futuros (EF Core los crea en runtime)\n\n-- Permisos para tablas que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA postulantes\n  GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO adminapp;\n\n-- Permisos para secuencias que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA postulantes\n  GRANT USAGE, SELECT, UPDATE ON SEQUENCES TO adminapp;\n\n-- Permisos para funciones que se creen de ahora en adelante\nALTER DEFAULT PRIVILEGES IN SCHEMA postulantes\n  GRANT EXECUTE ON FUNCTIONS TO adminapp;\n\n-- Quitamos permiso de crear objetos nuevos (solo el equipo de despliegue los crea)\nREVOKE CREATE ON SCHEMA postulantes FROM adminapp;\n\n-- El owner de la base sigue siendo un superusuario o un rol de despliegue, nunca el de la aplicación\nALTER DATABASE postulantes_db OWNER TO avnadmin;\n\nAcceder con el usuario nuevo.\n\n-- Al ejecutar solicitará password\npsql -h postgreusa101-richims026-65e7.k.aivencloud.com -p 28194 -U adminapp -d postulantes_db",
+    "crumbs": [
+      "III. PostgreSQL",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ejemplo 1</span>"
+    ]
+  }
+]
